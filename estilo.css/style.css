@@ -8,14 +8,24 @@ overflow-x: hidden;}
 }
     
 
-.header {
-    background-image: url(/img/SL-092619-23740-28.jpg);
-    background-color: black;
+#header {
     height: 150px;
     display: flex;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    max-width: 100%;
+}
+
+
+@media (max-width: 1000px){
+    #header{
+            /* Reverse the axis of the header, making it vertical. */
+            flex-direction: column;
+            
+            /* Align items to the begining (the left) of the header. */
+            align-items: flex-start;
+    }
 }
 
 #TITULO {
@@ -24,7 +34,19 @@ font-size: 60px;
 font-family: 'Oswald', sans-serif;
 padding-left: 15px;
 margin-left: 10px;
+max-width: 100%;
 }
+
+@media (max-width: 1000px){
+    .titulo{
+            /* Reverse the axis of the header, making it vertical. */
+            flex-direction: column;
+            
+            /* Align items to the begining (the left) of the header. */
+            align-items: flex-start;
+    }
+}
+
 .textoAlbum {
     font-family: 'Oswald', sans-serif;
     text-align: center;
@@ -36,19 +58,33 @@ margin-left: 10px;
     font-size: 35px;
 }
 .suscribite {
-    border: #393e41 2px none;
+    align-items: center;
     text-align: center;
+    border: #393e41 2px none;
+margin-left: auto;
+margin-right: auto;
     font-size: 20px;
     background-color: #a7aeb4;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin-left: 90px;
-    margin-right: 90px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
-    
+    width: 50%;
+    max-width: 100%;
+    height:50%;
 }
+
+@media (max-width: 1000px){
+    .suscribite{
+            /* Reverse the axis of the header, making it vertical. */
+            flex-direction: column;
+            
+            /* Align items to the begining (the left) of the header. */
+            align-items: flex-start;
+    }
+}
+
 .boton {
     color: #8a8a8c;
     font-size: 20px;
@@ -99,10 +135,22 @@ margin-left: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+@media all and (max-width: 1000px){
+    .imagenLali{
+    width:180px;
+    }
+    }
+    @media all and (max-width: 400px){
+    .imagenLali{
+    width:100%;
+    }
+    }
 .fotos {
 
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
 }
 
 
@@ -112,12 +160,16 @@ margin-left: 10px;
     font-size: 35px;
 }
 .imagenLali {
-    height: 250px;
+    height:50%;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
+    width: 50%;
+    max-width: 100%;
 }
+
+
 .primernoticia {
     justify-content: space-between;
     align-items: center;
@@ -132,6 +184,8 @@ margin-left: 10px;
     margin-right: 180px;;
     padding-right: 30px;
     padding-bottom: 30px;
+    max-width: 1000px;
+    width: 100%;
 }
 .boton {
     font-size: 20px;
@@ -193,19 +247,46 @@ margin-left: 10px;
     .mapa {
         margin-left: 80px;
         margin-bottom: 280px;;
+        max-width: 100%;
+        width: 50%;
+        height: 50%;
     }
+
+    @media all and (max-width: 1000px){
+        .mapa{
+        width:180px;
+        }
+        }
+        @media all and (max-width: 400px){
+        .mapa{
+        width:100%;
+        }
+        }
+
     .textodireccion {
         text-align: right;
-        font-size: 10px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         margin-right: 10px;
-        margin-top: -590px;
+        
         margin-bottom: 280px;
     
     }
-    .textoDireccion {
-        font-size: 20px;
+
+    @media (max-width:700px) and (min-width:500px) {
+        .textodireccion{
+           font-size: 12px;
+        }
+    }
+    @media (max-width:700px) and (min-width:500px) {
+        .textoEmail{
+           font-size: 12px;
+        }
+    }
+    @media (max-width:700px) and (min-width:500px) {
+        .textoTelefono{
+           font-size: 12px;
+        }
     }
     
     .textoTelefono {
